@@ -30,7 +30,7 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Nombres *
+          Nombre de tu Personaje Ficticio *
           </label>
           <input
             type="text"
@@ -43,7 +43,7 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Apellidos *
+            Apellidos de tu Personaje Ficticio *
           </label>
           <input
             type="text"
@@ -56,7 +56,7 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Edad *
+            Edad de tu Personaje Ficticio *
           </label>
           <input
             type="number"
@@ -70,7 +70,7 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Distrito *
+            Distrito de tu Personaje Ficticio*
           </label>
           <select
             name="distrito"
@@ -89,7 +89,7 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Instagram
+            Instagram de tu Personaje Ficticio
           </label>
           <input
             type="text"
@@ -102,7 +102,7 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Universidad
+            Universidad de tu Personaje Ficticio
           </label>
           <select
             name="universidad"
@@ -121,7 +121,7 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Historia *
+          Historia Ficticia *
         </label>
         <textarea
           name="historia"
