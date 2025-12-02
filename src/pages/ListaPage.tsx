@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams} from 'react-router-dom';
 import type { Persona } from '../types/Persona';
 import Modal from '../components/Modal';
 import PersonaForm from '../components/PersonaForm';
@@ -9,7 +9,6 @@ import * as api from '../services/api';
 
 const ListaPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
   const [personas, setPersonas] = useState<Persona[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
