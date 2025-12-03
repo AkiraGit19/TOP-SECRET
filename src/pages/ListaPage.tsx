@@ -103,6 +103,10 @@ const ListaPage = () => {
     }
   };
 
+
+  // FUNCIÓN HANDLEDELETE - TEMPORALMENTE COMENTADA
+  // Descomentar cuando se restauren los botones de editar/eliminar
+  /*
   const handleDelete = async (id: string) => {
     if (window.confirm('¿Estás seguro de que deseas eliminar esta persona?')) {
       try {
@@ -117,6 +121,8 @@ const ListaPage = () => {
       }
     }
   };
+  */
+
 
   const handleVote = async (id: string, vote: 'yala' | 'noyala') => {
     try {
