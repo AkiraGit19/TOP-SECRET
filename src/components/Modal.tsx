@@ -24,11 +24,11 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
   };
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity"
       onClick={onClose}
     >
-      <div 
+      <div
         className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-hidden border border-[#f499ba]/30"
         onClick={(e) => e.stopPropagation()}
       >
@@ -64,7 +64,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
         {/* Sección de Votación */}
         <div className="px-6 py-4 bg-gradient-to-r from-[#f180a9]/5 via-[#f499ba]/5 to-[#f7b3cb]/5 border-t border-[#f499ba]/20">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">¿Yala o No Yala?</h3>
-          
+
           {/* Botones de Votación */}
           <div className="grid grid-cols-2 gap-4 mb-4">
             <button
@@ -96,7 +96,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
                 <span className="text-gray-800 font-semibold">{persona.votosYala} votos ({porcentajeYala}%)</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div 
+                <div
                   className="bg-gradient-to-r from-green-500 to-green-600 h-2.5 rounded-full transition-all duration-500"
                   style={{ width: `${porcentajeYala}%` }}
                 ></div>
@@ -107,7 +107,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
                 <span className="text-gray-800 font-semibold">{persona.votosNoYala} votos ({porcentajeNoYala}%)</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div 
+                <div
                   className="bg-gradient-to-r from-red-500 to-red-600 h-2.5 rounded-full transition-all duration-500"
                   style={{ width: `${porcentajeNoYala}%` }}
                 ></div>

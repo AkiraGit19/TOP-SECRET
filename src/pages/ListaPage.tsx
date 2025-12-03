@@ -164,9 +164,9 @@ const ListaPage = () => {
           <div className="flex items-center justify-between mb-6">
             <div>
               <h1 className="text-4xl font-bold bg-gradient-to-r from-[#f180a9] via-[#f499ba] to-[#f7b3cb] bg-clip-text text-transparent mb-2">
-                Caninas de Lima
+                Infieles de Lima
               </h1>
-              <p className="text-gray-600">Gestiona el registro completo de todas las caninas</p>
+              <p className="text-gray-600">Gestiona el registro completo de todos los infieles</p>
             </div>
             <button
               onClick={() => handleOpenForm()}
@@ -259,7 +259,7 @@ const ListaPage = () => {
 
             {/* Contador de resultados */}
             <div className="text-sm text-gray-500">
-              Mostrando {filteredPersonas.length} de {personas.length} caninas
+              Mostrando {filteredPersonas.length} de {personas.length} infieles
             </div>
           </div>
         </div>
@@ -288,7 +288,7 @@ const ListaPage = () => {
         {loading && (
           <div className="text-center py-16">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#f180a9] mb-4"></div>
-            <p className="text-gray-500 text-lg">Cargando caninas...</p>
+            <p className="text-gray-500 text-lg">Cargando infieles...</p>
           </div>
         )}
 
@@ -314,8 +314,8 @@ const ListaPage = () => {
             </div>
             <p className="text-gray-500 text-lg">
               {personas.length === 0
-                ? 'No hay caninas registradas aún'
-                : 'No se encontraron caninas con los filtros aplicados'}
+                ? 'No hay infieles registradas aún'
+                : 'No se encontraron infieles con los filtros aplicados'}
             </p>
             {personas.length === 0 && (
               <button
