@@ -53,7 +53,7 @@ const HomePage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-[#f180a9] transition-colors">Agregar Canina</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-[#f180a9] transition-colors">Agregar Infiel</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Solicita la incorporación de nuevos infieles al sistema
               </p>
