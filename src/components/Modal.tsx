@@ -63,7 +63,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
 
         {/* Sección de Votación */}
         <div className="px-6 py-4 bg-gradient-to-r from-[#f180a9]/5 via-[#f499ba]/5 to-[#f7b3cb]/5 border-t border-[#f499ba]/20">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">¿Yala o No Yala?</h3>
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">¿Verdad o Mentira?</h3>
 
           {/* Botones de Votación */}
           <div className="grid grid-cols-2 gap-4 mb-4">
@@ -74,7 +74,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span>Yala</span>
+              <span>Verdad</span>
             </button>
 
             <button
@@ -84,7 +84,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
-              <span>No Yala</span>
+              <span>Mentira</span>
             </button>
           </div>
 
@@ -92,7 +92,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
           {totalVotos > 0 && (
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600 font-medium">Yala</span>
+                <span className="text-gray-600 font-medium">Verdad</span>
                 <span className="text-gray-800 font-semibold">{persona.votosYala} votos ({porcentajeYala}%)</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -103,7 +103,7 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
               </div>
 
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600 font-medium">No Yala</span>
+                <span className="text-gray-600 font-medium">Mentira</span>
                 <span className="text-gray-800 font-semibold">{persona.votosNoYala} votos ({porcentajeNoYala}%)</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">

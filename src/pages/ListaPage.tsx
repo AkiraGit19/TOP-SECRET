@@ -270,7 +270,7 @@ const ListaPage = () => {
             <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-[#f499ba]/30">
               <div className="bg-gradient-to-r from-[#f180a9]/10 via-[#f499ba]/10 to-[#f7b3cb]/10 px-6 py-5 border-b border-[#f499ba]/20">
                 <h2 className="text-2xl font-bold bg-gradient-to-r from-[#f180a9] to-[#f499ba] bg-clip-text text-transparent">
-                  {editingPersona ? 'Editar Canina' : 'Nueva Canina'}
+                  {editingPersona ? 'Editar Infiel' : 'Nuevo Infiel'}
                 </h2>
               </div>
               <div className="p-6">
