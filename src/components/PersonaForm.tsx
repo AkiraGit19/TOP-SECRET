@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { Persona } from '../types/Persona';
 import { DISTRITOS_LIMA, UNIVERSIDADES_LIMA } from '../constants/data';
 
@@ -8,10 +9,17 @@ interface PersonaFormProps {
 }
 
 const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!acceptedTerms) {
+      alert('Debes aceptar el Marco Legal para continuar.');
+      return;
+    }
+
     const formData = new FormData(e.currentTarget);
-    
+
     onSubmit({
       nombres: formData.get('nombres') as string,
       apellidos: formData.get('apellidos') as string,
@@ -27,10 +35,23 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Aviso de Parodia */}
+      <div className="bg-amber-50 border-2 border-amber-400 rounded-xl p-6 mb-6">
+        <div className="flex items-start space-x-3">
+          <span className="text-2xl flex-shrink-0">⚠️</span>
+          <div>
+            <h3 className="font-bold text-amber-900 text-lg mb-2">Aviso Importante</h3>
+            <p className="text-amber-800 leading-relaxed">
+              Todo el contenido publicado en este foro es <strong>ficción</strong>. Las historias pueden contener parodia, sátira o humor. El contenido no tiene relación con la realidad.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-          Nombre de tu Personaje Ficticio *
+            Nombre de tu Personaje Ficticio *
           </label>
           <input
             type="text"
@@ -131,6 +152,30 @@ const PersonaForm = ({ persona, onSubmit, onCancel }: PersonaFormProps) => {
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f499ba] focus:border-[#f499ba] outline-none transition-all resize-none"
           placeholder="Escribe la historia de esta persona..."
         />
+      </div>
+
+      {/* Casilla de Aceptación Obligatoria */}
+      <div className="bg-gray-50 border border-gray-300 rounded-xl p-6">
+        <label className="flex items-start space-x-3 cursor-pointer group">
+          <input
+            type="checkbox"
+            checked={acceptedTerms}
+            onChange={(e) => setAcceptedTerms(e.target.checked)}
+            className="mt-1 w-5 h-5 text-[#f180a9] border-gray-300 rounded focus:ring-2 focus:ring-[#f499ba] cursor-pointer"
+          />
+          <span className="text-sm text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+            He leído y acepto el{' '}
+            <a
+              href="/marco-legal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#f180a9] font-semibold hover:text-[#f499ba] underline"
+            >
+              Marco Legal
+            </a>
+            {' '}y confirmo que la información que estoy proporcionando es <strong>ficticia</strong>, se publica bajo el propósito de parodia/sátira, y no usaré datos personales reales de ninguna persona.
+          </span>
+        </label>
       </div>
 
       <div className="flex justify-end space-x-4 pt-4">
