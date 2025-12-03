@@ -175,7 +175,7 @@ const ListaPage = () => {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
-              <span>Agregar Canina</span>
+              <span>Agregar Infiel</span>
             </button>
           </div>
 
@@ -322,7 +322,7 @@ const ListaPage = () => {
                 onClick={() => handleOpenForm()}
                 className="mt-4 px-6 py-2 bg-gradient-to-r from-[#f180a9] to-[#f499ba] text-white rounded-lg font-medium hover:from-[#f499ba] hover:to-[#f7b3cb] transition-all duration-300"
               >
-                Agregar la primera canina
+                Agregar el primer infiel
               </button>
             )}
           </div>
