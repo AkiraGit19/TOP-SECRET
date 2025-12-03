@@ -12,70 +12,116 @@ const MarcoLegalPage = () => {
 
         {/* Contenido */}
         <div className="space-y-8">
-          {/* Naturaleza de la Plataforma */}
+          {/* Preámbulo */}
           <section className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:border-[#f499ba]/30 transition-all duration-300">
             <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
               <span className="w-2 h-2 bg-[#f180a9] rounded-full mr-3"></span>
-              Naturaleza de la Plataforma
+              Preámbulo: Naturaleza y Ficción del Contenido
             </h2>
             <div className="prose prose-gray max-w-none">
               <p className="text-gray-700 leading-relaxed">
-                Esta plataforma funciona como un espacio para compartir anécdotas de manera completamente anónima. Tal como se detalla en la sección de Privacidad y Legalidad del sitio, no verificamos identidades, no pedimos documentos, no recopilamos información personal que permita identificar a alguien, ni realizamos ningún tipo de tratamiento de datos privados. El contenido es aportado únicamente por usuarios anónimos, similar a foros como 4chan u otros espacios donde cualquiera puede publicar historias u opiniones sin autentificación.
+                Esta plataforma es un espacio dedicado a la publicación de ficción de personajes (Fanfics), historias y características inventadas por sus autores. El propósito, la estructura y el carácter de las publicaciones están totalmente inspirados en los foros de fanfiction, donde todo el contenido es ficticio y, por su naturaleza, puede tener un carácter de parodia, sátira o comentario.
               </p>
             </div>
           </section>
 
-          {/* Responsabilidad sobre el Contenido */}
+          {/* 1. Naturaleza de la Plataforma y Principio de Anonimato */}
           <section className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:border-[#f499ba]/30 transition-all duration-300">
             <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
               <span className="w-2 h-2 bg-[#f180a9] rounded-full mr-3"></span>
-              Responsabilidad sobre el Contenido
+              1. Naturaleza de la Plataforma y Principio de Anonimato
             </h2>
             <div className="prose prose-gray max-w-none space-y-4">
               <p className="text-gray-700 leading-relaxed">
-                Si en alguna publicación se mencionan nombres, es importante aclarar que la responsabilidad recae exclusivamente en el usuario que decidió incluir y publicar esa información. Esto no se considera tratamiento de datos por parte de la plataforma, por lo que no genera responsabilidades bajo las leyes de Protección de Datos Personales, las cuales solo aplican cuando una entidad recopila, gestiona o procesa activamente información personal, cosa que aquí no sucede.
+                Esta plataforma funciona bajo un estricto principio de ficción, anonimato y no autenticación.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                La situación es comparable a lo que ocurre en redes como Facebook, X o Reddit: si alguien menciona o expone a otra persona, la responsabilidad es del autor del mensaje, no de la plataforma que simplemente aloja contenido generado por terceros. Al igual que en esos sitios, aquí no se verifica identidad ni se relacionan publicaciones con personas reales.
+                <strong>Respecto al Autor:</strong> No solicitamos, verificamos, ni almacenamos ningún dato que permita identificar al autor.
               </p>
-            </div>
-          </section>
-
-          {/* Perfiles Públicos en Redes Sociales */}
-          <section className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:border-[#f499ba]/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-              <span className="w-2 h-2 bg-[#f180a9] rounded-full mr-3"></span>
-              Perfiles Públicos en Redes Sociales
-            </h2>
-            <div className="prose prose-gray max-w-none">
               <p className="text-gray-700 leading-relaxed">
-                Cuando una cuenta en redes sociales es pública, su información puede ser vista, compartida o enlazada por cualquiera. La plataforma no tiene control sobre esto, ya que no accedemos ni extraemos datos de ningún perfil. Los usuarios solo comparten enlaces que ya están disponibles públicamente.
+                <strong>Respecto al Contenido (Personajes):</strong> Los campos estructurados (como 'Nombre', 'Apellido', 'Universidad' y 'Distrito') están diseñados únicamente para ingresar datos del personaje de ficción y para fines de ambientación de la historia.
               </p>
             </div>
           </section>
 
-          {/* Sobre la Difamación */}
+          {/* 2. Política de Ficción y Prohibición de Datos Reales */}
           <section className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:border-[#f499ba]/30 transition-all duration-300">
             <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
               <span className="w-2 h-2 bg-[#f180a9] rounded-full mr-3"></span>
-              Sobre la Difamación
+              2. Política de Ficción y Prohibición de Datos Reales
             </h2>
-            <div className="prose prose-gray max-w-none">
+            <div className="prose prose-gray max-w-none space-y-4">
               <p className="text-gray-700 leading-relaxed">
-                En cuanto a las normas sobre difamación, estas se aplican entre personas: cualquier acción legal debe dirigirse al usuario que realizó la publicación, no a la plataforma, porque nosotros no generamos ni avalamos el contenido. Nuestro rol es únicamente ofrecer un espacio de publicación anónima, comparable a un tablón digital donde terceros pueden dejar mensajes.
+                El contenido de las publicaciones, incluyendo los datos ingresados en los campos estructurados (Nombre Ficticio, Apellido Ficticio, etc.) y en el cuerpo de la historia, no tiene relación alguna con la realidad.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Queda estrictamente prohibido:</strong>
+              </p>
+              <ul className="list-disc list-inside text-gray-700 leading-relaxed space-y-2 ml-4">
+                <li>Presentar historias como hechos verídicos o reportajes.</li>
+                <li>Presentar historias en las que se tenga la intención de presentar a una persona real.</li>
+              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                La plataforma no realiza ningún Tratamiento de Datos Personales de terceros bajo la Ley N° 29733 de Perú, pues el contenido debe ser, por norma de uso, ficticio. Cualquier dato real que el autor decida ingresar contraviene nuestras normas y será tratado como una violación directa.
               </p>
             </div>
           </section>
 
-          {/* Revisión de Contenido */}
+          {/* 3. Exoneración Total de Responsabilidad por Contenido Ficticio */}
           <section className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:border-[#f499ba]/30 transition-all duration-300">
             <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
               <span className="w-2 h-2 bg-[#f180a9] rounded-full mr-3"></span>
-              Revisión de Contenido
+              3. Exoneración Total de Responsabilidad por Contenido Ficticio
             </h2>
-            <div className="prose prose-gray max-w-none">
+            <div className="prose prose-gray max-w-none space-y-4">
               <p className="text-gray-700 leading-relaxed">
-                Aun así, para actuar de buena fe, si nos facilitas el enlace exacto de la publicación que consideras dañina, podemos revisarla según nuestras reglas internas para determinar si contiene datos sensibles explícitos (como direcciones, teléfonos, documentos o información privada no pública). Si incumple las normas, retiraremos el contenido; si no es así, te explicaremos los motivos.
+                La plataforma no garantiza, avala ni verifica la veracidad del contenido, por lo que se exime de toda responsabilidad por cualquier impacto o consecuencia que pueda derivarse de las publicaciones.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>El usuario y el tercero afectado reconocen y aceptan que:</strong>
+              </p>
+              <ul className="list-disc list-inside text-gray-700 leading-relaxed space-y-2 ml-4">
+                <li>Las publicaciones tienen un carácter de ficción y parodia/sátira, y no deben ser tomadas como hechos reales, consejos profesionales o información verídica.</li>
+                <li>La plataforma no es responsable por perjuicios, implicaciones o consecuencias económicas, laborales, sociales, personales, emocionales, mentales o de cualquier otro aspecto del proyecto de vida o dignidad que un tercero o un usuario pueda alegar haber sufrido a causa del contenido publicado.</li>
+                <li>Cualquier similitud de los personajes o situaciones con personas o hechos reales es pura coincidencia y no es responsabilidad de la plataforma. La interpretación del contenido como real, veraz o difamatorio recae exclusivamente en el lector.</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* 4. Responsabilidad Exclusiva del Autor y Garantía de Indemnidad */}
+          <section className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:border-[#f499ba]/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+              <span className="w-2 h-2 bg-[#f180a9] rounded-full mr-3"></span>
+              4. Responsabilidad Exclusiva del Autor y Garantía de Indemnidad
+            </h2>
+            <div className="prose prose-gray max-w-none space-y-4">
+              <p className="text-gray-700 leading-relaxed">
+                La responsabilidad legal recae íntegramente en el autor anónimo de la publicación.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                El autor garantiza y se compromete a mantener indemne a la plataforma (liberarla de toda culpa y costo) ante cualquier demanda, querella o acción legal iniciada por un tercero que alegue difamación o perjuicio.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Toda acción legal debe dirigirse al autor del mensaje. La plataforma actúa únicamente como un prestador de servicios de alojamiento de datos (hosting) pasivo.
+              </p>
+            </div>
+          </section>
+
+          {/* 5. Procedimiento de Aviso y Retirada */}
+          <section className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:border-[#f499ba]/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+              <span className="w-2 h-2 bg-[#f180a9] rounded-full mr-3"></span>
+              5. Procedimiento de Aviso y Retirada (Deber de Diligencia)
+            </h2>
+            <div className="prose prose-gray max-w-none space-y-4">
+              <p className="text-gray-700 leading-relaxed">
+                Para mantener la buena fe, si una publicación incumple las normas o utiliza datos sensibles, se puede notificar el enlace exacto.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Retirada Obligatoria:</strong> Se retirará inmediatamente cualquier publicación que haga alusión a la no ficción de los personajes de los que se pueda hablar en el foro como por ejemplo datos sensibles explícitos no públicos o públicos de terceros (direcciones, números de teléfono, DNI, datos financieros).
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Retirada por Orden Judicial:</strong> En casos de controversia por difamación o daño a la dignidad, la plataforma acatará sin objeción toda orden judicial o requerimiento oficial y vinculante de una autoridad competente de Perú. En ausencia de una orden, la plataforma aplicará su criterio interno, priorizando el principio de ficción y parodia.
               </p>
             </div>
           </section>
