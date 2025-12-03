@@ -12,16 +12,59 @@ interface ModalProps {
   onVote: (id: string, vote: 'yala' | 'noyala') => void;
 }
 
+
 const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
   if (!isOpen || !persona) return null;
+
+  // Funciones para manejar localStorage de votos
+  const getVotedPersonas = (): string[] => {
+    try {
+      const votes = localStorage.getItem('votes');
+      return votes ? JSON.parse(votes) : [];
+    } catch (error) {
+      console.error('Error al leer votos de localStorage:', error);
+      return [];
+    }
+  };
+
+  const hasVoted = (personaId: string): boolean => {
+    const votedPersonas = getVotedPersonas();
+    return votedPersonas.includes(personaId);
+  };
+
+  const saveVote = (personaId: string) => {
+    try {
+      const votedPersonas = getVotedPersonas();
+      if (!votedPersonas.includes(personaId)) {
+        votedPersonas.push(personaId);
+        localStorage.setItem('votes', JSON.stringify(votedPersonas));
+      }
+    } catch (error) {
+      console.error('Error al guardar voto en localStorage:', error);
+    }
+  };
 
   const totalVotos = persona.votosYala + persona.votosNoYala;
   const porcentajeYala = totalVotos > 0 ? Math.round((persona.votosYala / totalVotos) * 100) : 0;
   const porcentajeNoYala = totalVotos > 0 ? Math.round((persona.votosNoYala / totalVotos) * 100) : 0;
 
+  // Verificar si el usuario ya votó por esta persona
+  const yaVoto = hasVoted(persona.id);
+
   const handleVote = (vote: 'yala' | 'noyala') => {
+    // Verificar si ya votó
+    if (yaVoto) {
+      alert('Ya votaste por esta persona');
+      return;
+    }
+
+    // Realizar el voto
     onVote(persona.id, vote);
+
+    // Guardar en localStorage que ya votó
+    saveVote(persona.id);
   };
+
 
   return (
     <div
@@ -65,11 +108,24 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
         <div className="px-6 py-4 bg-gradient-to-r from-[#f180a9]/5 via-[#f499ba]/5 to-[#f7b3cb]/5 border-t border-[#f499ba]/20">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">¿Verdad o Mentira?</h3>
 
+          {/* Mensaje si ya votó */}
+          {yaVoto && (
+            <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-blue-800 text-center font-medium">
+                ✓ Ya votaste por esta persona
+              </p>
+            </div>
+          )}
+
           {/* Botones de Votación */}
           <div className="grid grid-cols-2 gap-4 mb-4">
             <button
               onClick={() => handleVote('yala')}
-              className="flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg font-medium hover:from-green-600 hover:to-green-700 active:from-green-700 active:to-green-800 active:scale-95 active:shadow-sm transition-all duration-150 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              disabled={yaVoto}
+              className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-150 shadow-md focus:outline-none ${yaVoto
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 active:from-green-700 active:to-green-800 active:scale-95 active:shadow-sm hover:shadow-lg focus:ring-2 focus:ring-green-500 focus:ring-offset-2'
+                }`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -79,7 +135,11 @@ const Modal = ({ isOpen, onClose, persona, onVote }: ModalProps) => {
 
             <button
               onClick={() => handleVote('noyala')}
-              className="flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg font-medium hover:from-red-600 hover:to-red-700 active:from-red-700 active:to-red-800 active:scale-95 active:shadow-sm transition-all duration-150 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+              disabled={yaVoto}
+              className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-150 shadow-md focus:outline-none ${yaVoto
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-600 hover:to-red-700 active:from-red-700 active:to-red-800 active:scale-95 active:shadow-sm hover:shadow-lg focus:ring-2 focus:ring-red-500 focus:ring-offset-2'
+                }`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
